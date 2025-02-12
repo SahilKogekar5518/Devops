@@ -1,12 +1,9 @@
 def factorial(n):
-    result = 1
-    for i in range(1, n+1):
-       result *=i
-    return result
-    
-if __name__ == "__main__":
-   number = int(input("enter number to calculate factorial"))
-   if number < 0:
-      print("factorial is not defined for negative number")
-   else:
-      print("the factorial of {number} is")
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+n = int(input("Enter a number: "))
+print(factorial(n))
+print("program complete")
